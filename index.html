@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Kalkulatory</title>
+  <link rel="stylesheet" href="sass/style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/a029292f1e.js"></script>
+</head>
+
+<body>
+  <!-- 
+    Użyte technologie: 
+    --- SASS 
+    --- BOOTSTRAP 
+  -->
+  <div class="gradient">
+  <div class="container row mx-auto">
+    <div class="panel1 col-6 ">
+      <h1>Witaj, tu obliczysz wszystko!</h1>
+      <hr class="hr" />
+      <h2>Dostępne kalkulatory:</h2>
+      <button id="usual" class="btn btn-outline-secondary btn-lg">
+        Zwykły
+      </button>
+      <button id="exchange" class="btn btn-outline-secondary btn-lg">
+        Walutowy
+      </button>
+      
+    </div>
+    <div class="panel2 col-6">
+      <div class="calculator">
+        <div class="bodyCalc">
+          <div class="screen"></div>
+
+          <div class="btn-group">
+            <button type="reset" class="btn btn-secondary" value="Clear">C</button>
+            <button type="button" class="btn btn-secondary" value="delOne"><i class="fas fa-backspace"></i></button>
+            <button type="button" class="btn btn-secondary" value="^">X<sup>y</sup>
+            </button>
+            <button type="button" class="btn btn-secondary" value="/">/</button>
+            <button type="button" class="btn btn-secondary" value="*">X</button>
+          </div>
+
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary" value="7">7</button>
+            <button type="button" class="btn btn-secondary" value="8">8</button>
+            <button type="button" class="btn btn-secondary" value="9">9</button>
+            <button type="button" class="btn btn-secondary" value="-">-</button>
+          </div>
+
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary" value="4">4</button>
+            <button type="button" class="btn btn-secondary" value="5">5</button>
+            <button type="button" class="btn btn-secondary" value="6">6</button>
+            <button type="button" class="btn btn-secondary" value="+">+</button>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary" value="1" onClick=insert(1)>1</button>
+            <button type="button" class="btn btn-secondary" value="2">2</button>
+            <button type="button" class="btn btn-secondary" value="3">3</button>
+            <button type="button" class="btn btn-secondary" value="%">%</button>
+          </div>
+
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary" value="0">0</button>
+            <button type="button" class="btn btn-secondary" value="00">00</button>
+            <button type="button" class="btn btn-secondary" value=".">.</button>
+            <button type="submit" class="btn btn-secondary equal" value="equal" onClick="equal()">=</button>
+          </div>
+
+          <div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exchange">
+
+
+        <h2>Kalkulator Walutowy</h2>
+        <p>Proszę, wprowadź wartość:</p>
+
+        <form class="form-inline">
+          <div class="form-group mb-2">
+            <input type="number" class="form-control" id="amount" min="0" />
+          </div>
+          <div class="form-group mx-sm-3 mb-2">
+            <select class="form-control" id="fromCurrency" required>
+              <option>PLN</option>
+              <option>EUR</option>
+              <option>USD</option>
+            </select>
+          </div>
+          <div class="form-group mx-sm-3 mb-2">
+            <label>na walutę w: </label>
+            <select class="form-control" id="toCurrency" required>
+              <option>EUR</option>
+              <option>USD</option>
+              <option>PLN</option>
+            </select>
+          </div>
+          <button id="submit"class="btn btn-outline-light mb-2 calcCurr">Oblicz</button>
+        </form>
+        <div class="result">
+          <p class="toShow">tu pojawi się wynik</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+  <script src="code.js"></script>
+</body>
+
+</html>
