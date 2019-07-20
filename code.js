@@ -4,29 +4,38 @@ const usual = document.querySelector(".calculator");
 const currency = document.querySelector(".exchange");
 const btnUsual = document.querySelector("#usual");
 const btnCurrency = document.querySelector("#exchange");
-btnUsual.addEventListener("click", () => {
-  let dispUsual = usual.style.display;
-  let dispCurrency = currency.style.display;
 
-  if (dispUsual === "none") {
+function changeUsual(){
+ 
+let styleComputedUsual = getComputedStyle(usual);
+let dispUsual = styleComputedUsual.getPropertyValue("display");
+
+  if(dispUsual === "block"){
+    usual.style.display = "none";
+  } else {
     usual.style.display = "block";
     currency.style.display = "none";
-  } else {
-    usual.style.display = "none";
   }
-});
 
-btnCurrency.addEventListener("click", () => {
-  let dispUsual = usual.style.display;
-  let dispCurrency = currency.style.display;
+}
 
-  if (dispCurrency === "none") {
-    currency.style.display = "block";
+function changeCurr(){
+  let styleComputedCurrency = getComputedStyle(currency);
+  let dispCurr = styleComputedCurrency.getPropertyValue("display");
+  
+    if(dispCurr === "block"){
+      currency.style.display = "none";
+    } else {
+      currency.style.display = "block";
     usual.style.display = "none";
-  } else {
-    currency.style.display = "none";
+
+    }
+  
   }
-});
+  
+
+btnUsual.addEventListener("click", changeUsual);
+btnCurrency.addEventListener('click', changeCurr);
 
 //---------------->
 // USUAL CALCULATOR
@@ -93,6 +102,7 @@ for (const btn of btns) {
 
 const submitCurrency = document.querySelector("#submit");
 const pToShow = document.querySelector(".toShow");
+
 
 const rates = {
   PLNUSD: 0.29,

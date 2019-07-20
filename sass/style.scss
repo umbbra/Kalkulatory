@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Cagliostro|Fahkwang|Roboto|Share+Tech+Mono&display=swap');
 
-// font-family: 'Roboto', sans-serif;
-// font-family: 'Share Tech Mono', monospace;
-// font-family: 'Cagliostro', sans-serif;
-// font-family: 'Fahkwang', sans-serif;
+
 @mixin background-gradient($start-color, $end-color, $orientation) {
   background: $start-color;
 
@@ -28,29 +25,29 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+ 
+div.gradient {
+  @include background-gradient(#23074d, #cc5333, horizontal);
+  height: 100vh;
+  width:100vw;
+    div.container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      height: 80vh;
+      min-width: 80vw;
 
-  body {
-    div.gradient {
-      @include background-gradient(#23074d, #cc5333, horizontal);
-      height: 100vh;
-      width:100vw;
-      div.container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        height: 80vh;
-        min-width: 80vw;
+      div.panel1 {
+      text-align: center;
+      width: 50vw;
 
-        div.panel1 {
-          text-align: center;
-          width: 50vw;
-
-          h1 {
-            font-family: Fahkwang, Arial, 'Times New Roman', Times, serif;
-            font-size: 4vh;
-            padding: 5vh 5vw;
+      h1 {
+      font-family: Fahkwang, Arial, 'Times New Roman', Times, serif;
+      font-size: 4vh;
+      padding: 5vh 5vw;
           }
 
           hr.hr {
@@ -140,5 +137,3 @@
         }
       }
     }
-  }
-}
