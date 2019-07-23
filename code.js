@@ -1,4 +1,4 @@
-//-----> USTAWIANIE WYŚWIETLANIA PANELI
+//-----> SETTING PANEL DISPLAYS
 
 const usual = document.querySelector(".calculator");
 const currency = document.querySelector(".exchange");
@@ -84,7 +84,6 @@ function equal() {
 for (const btn of btns) {
   btn.addEventListener("click", function() {
     const screen = document.querySelector(".screen");
-
     value = this.value;
     if (value === "Clear") {
       screen.textContent = "";
@@ -94,6 +93,8 @@ for (const btn of btns) {
       document.querySelector(".equal").value = "";
     } else {
       screen.textContent += value;
+      let divideValue = value.substring(value.length-2);
+      console.log(divideValue);
     }
   });
 }
@@ -120,7 +121,7 @@ function calculate(e) {
   let from = document.querySelector("#fromCurrency").value;
   let to = document.querySelector("#toCurrency").value;
 
-  const tabValue = [];
+   const tabValue = [];
   tabValue.push(from);
   tabValue.push(to);
   let toChange = tabValue.join("");
