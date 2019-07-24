@@ -24,7 +24,7 @@ div.container {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  top: 50%;
+  top: 34%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -90,7 +90,6 @@ div.container div.panel2 div.calculator {
 div.container div.panel2 div.calculator div.bodyCalc {
   width: 30vw;
   max-width: 24vw;
-  max-height: 60vh;
   font-size: 4vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -119,7 +118,7 @@ div.container div.panel2 div.calculator div.bodyCalc div.btn-group {
 }
 
 div.container div.panel2 div.calculator div.bodyCalc div.btn-group button.btn {
-  font-size: 3vh;
+  font-size: 1.5rem;
   width: 50px;
   height: 80px;
   background-color: rgba(90, 98, 104, 0.2);
@@ -133,7 +132,6 @@ div.container div.panel2 div.calculator div.bodyCalc div.btn-group button.btn:ho
   div.container div.panel2 div.calculator div.bodyCalc {
     width: 50vw;
     max-width: 50vw;
-    max-height: 50vh;
     margin-top: 3vh;
   }
 }
@@ -174,7 +172,8 @@ div.container div.panel2 div.exchange form {
       align-content: center;
 }
 
-div.container div.panel2 div.exchange form input, div.container div.panel2 div.exchange form select {
+div.container div.panel2 div.exchange form input,
+div.container div.panel2 div.exchange form select {
   background-color: transparent;
   color: white;
 }
@@ -212,7 +211,7 @@ div.container div.panel2 div.exchange button.calcCurr {
 @media (max-width: 460px) {
   div.container div.panel2 div.exchange button.calcCurr {
     position: relative;
-    botton: 0;
+    bottom: 0;
     right: 0;
     margin: auto;
   }
@@ -251,7 +250,6 @@ div.container div.panel2 div.exchange button.calcCurr {
             flex-direction: column;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    height: auto;
     min-width: 100vw;
   }
 }
