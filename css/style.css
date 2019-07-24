@@ -90,6 +90,7 @@ div.container div.panel2 div.calculator {
 div.container div.panel2 div.calculator div.bodyCalc {
   width: 30vw;
   max-width: 24vw;
+  padding: 2vh 0;
   font-size: 4vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -109,6 +110,7 @@ div.container div.panel2 div.calculator div.bodyCalc div.screen {
   border-radius: 5px;
   margin-bottom: 2px;
   min-height: 8vh;
+  overflow: hidden;
 }
 
 div.container div.panel2 div.calculator div.bodyCalc div.btn-group {
@@ -152,7 +154,7 @@ div.container div.panel2 div.calculator div.bodyCalc div.btn-group button.btn:ho
 div.container div.panel2 div.exchange {
   display: none;
   position: relative;
-  top: 20%;
+  top: 15%;
   border: 1px solid white;
   font-size: 2vh;
   padding: 5vh 4vh 2vh 4vh;

@@ -84,6 +84,7 @@ function equal() {
 for (const btn of btns) {
   btn.addEventListener("click", function() {
     const screen = document.querySelector(".screen");
+    let scVal = screen.textContent;
     value = this.value;
     if (value === "Clear") {
       screen.textContent = "";
@@ -93,8 +94,23 @@ for (const btn of btns) {
       document.querySelector(".equal").value = "";
     } else {
       screen.textContent += value;
-      let divideValue = value.substring(value.length-2);
-      console.log(divideValue);
+
+      // THE CODE BELOW DOESN'T WORKING, it should validation, protect before entering 2 characters of operations   
+      
+      //let divideValue = scVal.substr(scVal.length-2,2);
+      
+      // const exp =["*", "/", "-", "+", "%", "^"];
+
+      // for(let i=0; i<exp.length; i++){
+
+      // if(divideValue[0].indexOf(exp[i]) > -1 && divideValue[1].indexOf(exp[i]) > -1){
+      //   console.log("Eureka: " + divideValue);
+      //   screen.textContent = exp.substring(0, exp.length - 1);
+      // }       
+    // }
+
+
+
     }
   });
 }
